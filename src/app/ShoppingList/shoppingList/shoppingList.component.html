@@ -2,7 +2,7 @@
     <div class="col-md-10">
         <app-shopping-list-edit></app-shopping-list-edit>
         <hr>
-        <ul class="list-group">
+        <ul *ngIf="ingredients.length !== 0; else noIngredients" class="list-group">
             <a 
             class="list-group-item" 
             style="cursor: pointer"
@@ -10,5 +10,8 @@
             {{ingredient.name}} ({{ingredient.amount}})
             </a>
         </ul>
+        <ng-template #noIngredients>
+            <p>No Ingredients have been added</p>
+        </ng-template>
     </div>
 </div>

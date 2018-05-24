@@ -1,9 +1,10 @@
-<app-header></app-header>
+<app-header
+(linkClicked)="onLinkClicked($event)"></app-header>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <RecipeBook></RecipeBook>
-            <shoppingList></shoppingList>
+            <RecipeBook *ngIf="linkClicked === 'recipe'"></RecipeBook>
+            <shoppingList *ngIf="linkClicked !== 'recipe'"></shoppingList>
         </div>
     </div>
 </div>

@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  linkClicked = 'recipe';
+  onLinkClicked(link: string){
+    console.log(link);
+    this.linkClicked = link;
+  }
   
 }
