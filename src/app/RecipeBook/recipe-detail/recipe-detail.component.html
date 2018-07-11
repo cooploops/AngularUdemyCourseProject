@@ -19,13 +19,13 @@
 
       <ul class="dropdown-menu">
         <li class="dropdown-item">
-          <a (click)="addIngredientsToShopList(singleRecipe.ingredients)" href="#">add ingredients to shopping list</a>
+          <a style="cursor: pointer;" (click)="addIngredientsToShopList(singleRecipe.ingredients)">add ingredients to shopping list</a>
         </li>
         <li class="dropdown-item">
-          <a href="#">edit recipe</a>
+          <a style="cursor: pointer;" (click)="onEditRecipe()">edit recipe</a>
         </li>
         <li class="dropdown-item">
-          <a href="#">delete recipe</a>
+          <a style="cursor: pointer;" (click)="onDeleteRecipe()">delete recipe</a>
         </li>
       </ul>
 
