@@ -1,6 +1,6 @@
 import { Recipe } from './recipe.model';
 import { Ingredient } from '../shared/ingredient.model';
-import { Subject } from 'rxjs';
+import { Subject } from 'rxjs/Subject';
 
 
 export class RecipeService {
@@ -25,6 +25,11 @@ export class RecipeService {
                 new Ingredient('Mix Berries', 15)
             ])
     ];
+
+    setRecipes(recipes: Array<Recipe>) {
+        this.recipes = recipes;
+        this.recipesChanged.next(this.recipes.slice());
+    }
 
     getRecipes() {
         return this.recipes.slice();
